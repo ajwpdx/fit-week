@@ -1,0 +1,30 @@
+#planner{
+    width: 80%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .time-period-title{
+        padding: 20px;
+    }
+
+    #planner-days{
+        display: flex;
+        flex-direction: row;
+
+        .planner-day{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+
+            .planner-workouts-container{
+                border: 1px solid black;
+                height: 100vh;
+            }
+
+        }
+    }
+
+
+}

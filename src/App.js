@@ -1,15 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
 import './styles/index.scss'
+
+import Header from './components/Header'
+import SavedWorkouts from './components/SavedWorkouts'
+import Planner from './components/Planner'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Let's code some cool shit. 
-        </p>
-      </header>
+      <Header/>
+      <div className='main-container'>
+      <SavedWorkouts/>
+      <Planner/>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,65 @@
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    transition: background-color 1s ease;
+    transition: color 0.5s ease;
+    font-family: var(--font-content);
+  
+  }
+  
+  h1 {
+    font-family: $font-title;
+    font-weight: 650;
+    letter-spacing: .1rem;
+    font-size: 5rem;
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-family: $font-headers;
+    font-size: 3rem;
+  
+  }
+  
+  h3{
+    font-family: $font-headers;
+    font-size: 2rem;
+    color: var(--ajw-blue);
+  }
+  
+  h4 {
+    font-family: $font-text;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 1.5rem 0 0;
+  }
+
+  p {
+    font-family: $font-text;
+    font-size: 1.5rem;
+    padding: 1.5rem 0 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  i {
+    font-size: 2.2rem;
+    cursor: pointer;
+  }
+  
+  p a {
+   color: var(--ajw-blue); 
+  }
+  
+  p a:hover{
+    color: var(--color-button-hover)
+  }
+
+  .main-container{
+      display: flex;
+      flex-direction: row;
+
+  }
