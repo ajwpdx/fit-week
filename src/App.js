@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <Header/>
       <div className='main-container'>
-      <SavedWorkouts/>
       <Planner/>
+      <SavedWorkouts/>
       </div>
     </div>
   );

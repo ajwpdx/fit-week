@@ -1,9 +1,10 @@
 #planner{
-    width: 80%;
+    width: 85%;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 600px;
 
     .time-period-title{
         padding: 20px;
@@ -12,15 +13,23 @@
     #planner-days{
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        width: 100%;
 
         .planner-day{
             display:flex;
             flex-direction: column;
             align-items: center;
+            width: 14%;
+
+            h3{
+                padding-bottom: 1rem;
+            }
 
             .planner-workouts-container{
+                width: 100%;
                 border: 1px solid black;
-                height: 100vh;
+
             }
 
         }

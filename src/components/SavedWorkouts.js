@@ -4,7 +4,7 @@ const SavedWorkouts = (props) => {
 
     return (
         <section id='saved-workouts'>
-            <h2>Saved Workouts</h2>
+            <h2>My Workouts</h2>
         </section>
     )
 }

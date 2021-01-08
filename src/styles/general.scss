@@ -1,6 +1,6 @@
 body {
-    background-color: var(--color-background);
-    color: var(--color-text);
+    background-color: $color-gray;
+    color: $color-black;
     transition: background-color 1s ease;
     transition: color 0.5s ease;
     font-family: var(--font-content);
@@ -13,6 +13,7 @@ body {
     letter-spacing: .1rem;
     font-size: 5rem;
     line-height: 1.2;
+    color: $color-red;
   }
   
   h2 {

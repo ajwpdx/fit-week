@@ -1,6 +1,14 @@
 header{
-    background-color: $color-light-blue;
-    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $color-black;
+    padding:15px 30px;
 
+
+    a {
+        font-size: 2rem;
+
+    }
 
 }
