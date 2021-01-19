@@ -6,12 +6,13 @@ const daysOfTheWeekAbrev = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 const today = new Date();
 
 
+
 export const getCalendarDay = (week, startDay) => {
 
 
-    if (today.getDay() > startDay) {
+    if (today.getDay() < startDay) {
         return (today.getDate() - startDay)
-    } else if (today.getDay() < startDay){
+    } else if (today.getDay() > startDay){
         return (today.getDate() + startDay)
     } else {
 

@@ -3,7 +3,7 @@ body {
     color: $color-black;
     transition: background-color 1s ease;
     transition: color 0.5s ease;
-    font-family: var(--font-content);
+    font-family: $font-text
   
   }
   
@@ -13,7 +13,7 @@ body {
     letter-spacing: .1rem;
     font-size: 5rem;
     line-height: 1.2;
-    color: $color-red;
+    color: $color-mint;
   }
   
   h2 {

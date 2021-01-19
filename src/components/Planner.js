@@ -22,7 +22,7 @@ const Planner = (props) => {
                 </div>
             </div>
             <div className="planner-day">
-                <h3>{getDayOfWeek(props.startDay+1)}</h3>
+                <h3>{getDayOfWeek(props.startDay +1)} • {getCalendarDay(props.weekIncrement, props.startDay+1)}</h3>
                 <div className="planner-workouts-container">
                     <PlannerWorkout/>
                     <PlannerWorkout/>
