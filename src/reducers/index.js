@@ -9,7 +9,7 @@ export const intitalApplicationState = {
     isLoading: false, 
     savedWorkouts: [],
     startDay: 1,
-    weekIncrement: 0
+    weekView: 0
 
 }
 

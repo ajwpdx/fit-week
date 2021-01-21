@@ -1,3 +1,4 @@
+import { DateTime } from 'luxon'
 
 const startOfWeek = 0
 
@@ -5,7 +6,9 @@ const daysOfTheWeekAbrev = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
 const today = new Date();
 
-
+export const getDayType = (week, startDay) => {
+    return "current-date"
+}
 
 export const getCalendarDay = (week, startDay) => {
 
