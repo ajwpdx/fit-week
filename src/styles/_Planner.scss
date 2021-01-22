@@ -1,32 +1,27 @@
 .past-date {
-  .planner-workouts-container{
-
+  .planner-workouts-container {
     background-color: gray;
+    opacity: 50%;
   }
 }
 
 .current-date {
-  
-  .planner-day-title{
+  .planner-day-title {
     background-color: $color-hot-pink;
     padding: 0 10px;
     border-radius: 15px;
     color: white;
   }
-  .planner-workouts-container{
-
+  .planner-workouts-container {
     background-color: white;
   }
-
 }
 
 .future-date {
-  .planner-workouts-container{
-
+  .planner-workouts-container {
     background-color: white;
   }
 }
-
 
 #planner {
   width: 85%;
@@ -36,16 +31,32 @@
   align-items: center;
   height: 600px;
 
-  #planner-header {
+  .planner-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .time-period-title {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      justify-content: space-between;
 
-      button{
-          width: 25px;
-          height: 25px;
-          
+      
+      h2{
+        margin: 0 0.5rem;
       }
+    }
+
+    .inc-arrow {
+      font-size: 3rem;
+      margin: 1px;
+      color: $color-hot-pink;
+
+      &:hover {
+        opacity: 75%;
+      }
+    }
   }
 
   .time-period-title {
@@ -62,7 +73,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 14%;
+      width: 15%;
 
       .planner-day-title {
         padding: 1rem;

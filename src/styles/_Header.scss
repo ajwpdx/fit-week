@@ -2,6 +2,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     background-color: $color-header;
     padding:15px 30px;
 
@@ -9,7 +10,11 @@ header{
         color: $color-white;
     }
 
-
+.setting-icon{
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
     a {
         font-size: 2rem;
 
