@@ -4,25 +4,32 @@ const daysOfTheWeekAbrev = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
 const today = new Date();
 
-export const getDayType = (week, startDay) => {
-    return "current-date"
-}
+export const getDayType = (weekView, startDay, position) => {
+    
+    if (weekView < 0){
+        return "past-date"
+    } else if (weekView > 0) {
+        return "future-date"
+    } else {
+        let dayIncrement = 0
 
-export const getCalendarDay = (weekView, startDay, position) => {
+        if (today.getDay() > startDay){
+            dayIncrement = startDay - today.getDay()
+        } else if (today.getDay() < startDay) {
+            dayIncrement = -(7 - (startDay - today.getDay()))
+        }
 
+        console.log(dayIncrement)
 
-    let dayIncrement = 0
-
-    if (today.getDay() > startDay){
-        dayIncrement = startDay - today.getDay()
-    } else if (today.getDay() < startDay) {
-        dayIncrement = -(7 - (startDay - today.getDay()))
+        if (dayIncrement + position > 0) {
+            return "future-date"
+        } else if (dayIncrement + position < 0) {
+            return "past-date"
+        } else{
+            return "current-date"
+        }
     }
 
-    let startOfWeek = DateTime.local().plus({days: dayIncrement, week: weekView})
-
-    return startOfWeek.day 
-    
 }
 
 export const getDayOfWeek = (weekView, startDay, position) => {
@@ -45,7 +52,7 @@ export const getDayOfWeek = (weekView, startDay, position) => {
 
     let startOfWeek = DateTime.local().plus({days: dayIncrement, week: weekView})
 
-    return dayOfWeek + " • " + (startOfWeek.day + position)
+    return dayOfWeek + " • " + (startOfWeek.plus({days:position}).day)
 
 }
 
