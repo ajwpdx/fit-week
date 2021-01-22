@@ -2,8 +2,12 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: $color-black;
+    background-color: $color-header;
     padding:15px 30px;
+
+    h1 {
+        color: $color-white;
+    }
 
 
     a {
