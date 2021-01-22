@@ -8,55 +8,59 @@ export const getDayType = (week, startDay) => {
     return "current-date"
 }
 
-export const getCalendarDay = (week, startDay) => {
+export const getCalendarDay = (weekView, startDay, position) => {
 
 
-    if (today.getDay() > startDay) {
-        return (today.getDate() - startDay)
-    } else if (today.getDay() > startDay){
-        return (today.getDate() + startDay)
-    } else {
+    let dayIncrement = 0
 
-        return today.getDate()
-    }
-    
-}
-
-export const getDayOfWeek = (startDay) => {
-    
-    let calendarDay = String(today.getDate());
-
-    // if (startOfWeek > today.getDay()) {
-    //     dd = String(today.getDate - startOfWeek)
-    // } else if (startOfWeek < today.getDay){
-    //     dd = String(today.getDate + startOfWeek)
-    // }
-
-    if (startDay >= 7) {
-        return daysOfTheWeekAbrev[startDay - 7]
-    } else {
-        return daysOfTheWeekAbrev[startDay]
+    if (today.getDay() > startDay){
+        dayIncrement = startDay - today.getDay()
+    } else if (today.getDay() < startDay) {
+        dayIncrement = -(7 - (startDay - today.getDay()))
     }
 
+    let startOfWeek = DateTime.local().plus({days: dayIncrement, week: weekView})
 
-}
-
-
-export const getToday = () =>{
-
-    // let today = new Date();
-    const dd = String(today.getDate()).padStart(2, '0');
-    const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    const yyyy = today.getFullYear();
+    return startOfWeek.day 
     
-    return mm + '/' + dd + '/' + yyyy;
 }
 
+export const getDayOfWeek = (weekView, startDay, position) => {
+
+    let dayOfWeek = "Mon"
+    
+    if (startDay + position >= 7) {
+        dayOfWeek = daysOfTheWeekAbrev[startDay + position - 7]
+    } else {
+        dayOfWeek = daysOfTheWeekAbrev[startDay + position]
+    }
+
+    let dayIncrement = 0
+
+    if (today.getDay() > startDay){
+        dayIncrement = startDay - today.getDay()
+    } else if (today.getDay() < startDay) {
+        dayIncrement = -(7 - (startDay - today.getDay()))
+    }
+
+    let startOfWeek = DateTime.local().plus({days: dayIncrement, week: weekView})
+
+    return dayOfWeek + " • " + (startOfWeek.day + position)
+
+}
 
 export const getWeek = (weekView, startDay) =>{
 
-    const startOfWeek = 1
+    let dayIncrement = 0
 
+    if (today.getDay() > startDay){
+        dayIncrement = startDay - today.getDay()
+    } else if (today.getDay() < startDay) {
+        dayIncrement = -(7 - (startDay - today.getDay()))
+    }
 
-    return DateTime.local().toLocaleString(DateTime.DATE_FULL)
+    let startOfWeek = DateTime.local().plus({days: dayIncrement, week: weekView})
+    let endOfWeek = startOfWeek.plus({days: 6})
+
+    return startOfWeek.toFormat('LLL dd, yyyy') + " - " + endOfWeek.toFormat('LLL dd, yyyy')
 }

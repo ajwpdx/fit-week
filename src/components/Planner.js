@@ -14,12 +14,12 @@ const Planner = (props) => {
         <section id='planner'>
             <div id='planner-header'>
             <button className="inc-arrow" onClick={()=>setWeekView(weekView-1)}>{"<"}</button>
-            <h2 className='time-period-title'>Week {weekView} {getWeek(weekView, props.startDay)}</h2>
+            <h2 className='time-period-title'>{getWeek(weekView, props.startDay)}</h2>
             <button className="inc-arrow" onClick={()=>setWeekView(weekView+1)}>{">"}</button>
             </div>
             <div id='planner-days'>
             <div className={"planner-day " + getDayType(weekView, props.startDay)}>
-                    <h3> {getDayOfWeek(props.startDay)} • {getCalendarDay(props.weekView, props.startDay)}</h3>
+                    <h3> {getDayOfWeek(weekView, props.startDay, 0)}</h3>
                     <div className="planner-workouts-container">
 
                         <PlannerWorkout />
@@ -27,42 +27,42 @@ const Planner = (props) => {
                     </div>
                 </div>
                 <div className="planner-day">
-                    <h3>{getDayOfWeek(props.startDay + 1)} • {getCalendarDay(weekView, props.startDay + 1)}</h3>
+                    <h3>{getDayOfWeek(weekView, props.startDay, 1)}</h3>
                     <div className="planner-workouts-container">
                         <PlannerWorkout />
                         <PlannerWorkout />
                     </div>
                 </div>
                 <div className="planner-day">
-                    <h3>{getDayOfWeek(props.startDay + 2)} • {getCalendarDay(weekView, props.startDay + 2)}</h3>
+                    <h3>{getDayOfWeek(weekView, props.startDay, 2)}</h3>
                     <div className="planner-workouts-container">
                         <PlannerWorkout />
                         <PlannerWorkout />
                     </div>
                 </div>
                 <div className="planner-day">
-                    <h3>{getDayOfWeek(props.startDay + 3)} • {getCalendarDay(weekView, props.startDay + 3)}</h3>
+                    <h3>{getDayOfWeek(weekView, props.startDay, 3)}</h3>
                     <div className="planner-workouts-container">
                         <PlannerWorkout />
                         <PlannerWorkout />
                     </div>
                 </div>
                 <div className="planner-day">
-                    <h3>{getDayOfWeek(props.startDay + 4)} • {getCalendarDay(weekView, props.startDay + 4)}</h3>
+                    <h3>{getDayOfWeek(weekView, props.startDay, 4)}</h3>
                     <div className="planner-workouts-container">
                         <PlannerWorkout />
                         <PlannerWorkout />
                     </div>
                 </div>
                 <div className="planner-day">
-                    <h3>{getDayOfWeek(props.startDay + 5)} • {getCalendarDay(weekView, props.startDay + 5)}</h3>
+                    <h3>{getDayOfWeek(weekView, props.startDay, 5)}</h3>
                     <div className="planner-workouts-container">
                         <PlannerWorkout />
                         <PlannerWorkout />
                     </div>
                 </div>
                 <div className="planner-day">
-                    <h3>{getDayOfWeek(props.startDay + 6)} • {getCalendarDay(weekView, props.startDay + 6)}</h3>
+                    <h3>{getDayOfWeek(weekView, props.startDay, 6)}</h3>
                     <div className="planner-workouts-container">
                         <PlannerWorkout />
                         <PlannerWorkout />
