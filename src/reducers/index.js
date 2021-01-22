@@ -2,6 +2,7 @@ import {
     FETCHING_SAVED_WORKOUTS,
     FETCH_SAVED_WORKOUTS,
     FETCH_CURRENT_WORKOUTS
+
 } from '../actions'
 
 export const intitalApplicationState = {
@@ -9,7 +10,6 @@ export const intitalApplicationState = {
     isLoading: false, 
     savedWorkouts: [],
     startDay: 1,
-    weekView: 0
 
 }
 

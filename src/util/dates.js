@@ -1,7 +1,5 @@
 import { DateTime } from 'luxon'
 
-const startOfWeek = 0
-
 const daysOfTheWeekAbrev = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
 const today = new Date();
@@ -13,7 +11,7 @@ export const getDayType = (week, startDay) => {
 export const getCalendarDay = (week, startDay) => {
 
 
-    if (today.getDay() < startDay) {
+    if (today.getDay() > startDay) {
         return (today.getDate() - startDay)
     } else if (today.getDay() > startDay){
         return (today.getDate() + startDay)
@@ -55,9 +53,10 @@ export const getToday = () =>{
 }
 
 
-export const getWeek = (increment, startDay) =>{
+export const getWeek = (weekView, startDay) =>{
 
-    if (today > startDay) {
-        
-    }
+    const startOfWeek = 1
+
+
+    return DateTime.local().toLocaleString(DateTime.DATE_FULL)
 }
