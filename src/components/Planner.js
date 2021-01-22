@@ -18,7 +18,7 @@ const Planner = (props) => {
             </div>
             <div id='planner-days'>
                 <div className={"planner-day " + getDayType(weekView, props.startDay, 0)}>
-                    <h3> {getDayOfWeek(weekView, props.startDay, 0)}</h3>
+                    <h3 className='planner-day-title'> {getDayOfWeek(weekView, props.startDay, 0)}</h3>
                     <div className="planner-workouts-container">
 
                         <PlannerWorkout />
@@ -26,42 +26,42 @@ const Planner = (props) => {
                     </div>
                 </div>
                 <div className={"planner-day " + getDayType(weekView, props.startDay, 1)}>
-                    <h3>{getDayOfWeek(weekView, props.startDay, 1)}</h3>
+                    <h3 className='planner-day-title'>{getDayOfWeek(weekView, props.startDay, 1)}</h3>
                     <div className="planner-workouts-container">
                         <PlannerWorkout />
                         <PlannerWorkout />
                     </div>
                 </div>
                 <div className={"planner-day " + getDayType(weekView, props.startDay, 2)}>
-                    <h3>{getDayOfWeek(weekView, props.startDay, 2)}</h3>
+                    <h3 className='planner-day-title'>{getDayOfWeek(weekView, props.startDay, 2)}</h3>
                     <div className="planner-workouts-container">
                         <PlannerWorkout />
                         <PlannerWorkout />
                     </div>
                 </div>
                 <div className={"planner-day " + getDayType(weekView, props.startDay, 3)}>
-                    <h3>{getDayOfWeek(weekView, props.startDay, 3)}</h3>
+                    <h3 className='planner-day-title'>{getDayOfWeek(weekView, props.startDay, 3)}</h3>
                     <div className="planner-workouts-container">
                         <PlannerWorkout />
                         <PlannerWorkout />
                     </div>
                 </div>
                 <div className={"planner-day " + getDayType(weekView, props.startDay, 4)}>
-                    <h3>{getDayOfWeek(weekView, props.startDay, 4)}</h3>
+                    <h3 className='planner-day-title'>{getDayOfWeek(weekView, props.startDay, 4)}</h3>
                     <div className="planner-workouts-container">
                         <PlannerWorkout />
                         <PlannerWorkout />
                     </div>
                 </div>
                 <div className={"planner-day " + getDayType(weekView, props.startDay, 5)}>
-                    <h3>{getDayOfWeek(weekView, props.startDay, 5)}</h3>
+                    <h3 className='planner-day-title'>{getDayOfWeek(weekView, props.startDay, 5)}</h3>
                     <div className="planner-workouts-container">
                         <PlannerWorkout />
                         <PlannerWorkout />
                     </div>
                 </div>
                 <div className={"planner-day " + getDayType(weekView, props.startDay, 6)}>
-                    <h3>{getDayOfWeek(weekView, props.startDay, 6)}</h3>
+                    <h3 className='planner-day-title'>{getDayOfWeek(weekView, props.startDay, 6)}</h3>
                     <div className="planner-workouts-container">
                         <PlannerWorkout />
                         <PlannerWorkout />
