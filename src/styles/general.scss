@@ -19,13 +19,13 @@ body {
   
   h2 {
     font-family: $font-headers;
-    font-size: 3rem;
+    font-size: 2.5rem;
   
   }
   
   h3{
     font-family: $font-headers;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
   h4 {
@@ -54,6 +54,17 @@ body {
 
   button{
     background-color: $color-blue;
+    font-weight: bold;
     color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: inset;
+    cursor: pointer;
+    font-size: 1.5rem;
+
+    &:hover{
+      opacity: 75%;
+    }
+
 
   }

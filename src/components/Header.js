@@ -1,5 +1,6 @@
-import { SettingOutlined } from '@ant-design/icons'
 import React from 'react'
+import UserIcon from './UserIcon'
+import { SettingOutlined } from '@ant-design/icons'
 import { Link } from 'react-router-dom'
 
 const Header = (props) => {
@@ -9,7 +10,9 @@ const Header = (props) => {
             <h1>
                 FIT WEEK
         </h1>
-            <SettingOutlined className='setting-icon' />
+        <nav>
+            <UserIcon/>
+        </nav>
         </header>
     )
 

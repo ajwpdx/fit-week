@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import { getDayType, getDayOfWeek, getWeekStart, getWeekEnd } from "../util/dates"
+import { getDayType, getDayOfWeek, getWeek } from "../util/dates"
 import PlannerWorkout from './PlannerWorkout'
-import {LeftSquareFilled, RightSquareFilled} from '@ant-design/icons'
+import { LeftOutlined, RightOutlined, LeftSquareFilled, RightSquareFilled } from '@ant-design/icons'
 
 const Planner = (props) => {
 
@@ -11,14 +11,13 @@ const Planner = (props) => {
     return (
         <section id='planner'>
             <div className='planner-header'>
-                <div className='time-period-title'>
-                <h2>{getWeekStart(weekView, props.startDay)}</h2>
-                <h2>-</h2>
-                <h2>{getWeekEnd(weekView, props.startDay)}</h2>
+                <button className='create-workout'>Create Workout</button>
+                <div className='time-period'>
+                <h2>{getWeek(weekView, props.startDay)}</h2>
                 </div>
                 <div className='increment-arrows'>
-                    <LeftSquareFilled  className='inc-arrow' onClick={() => setWeekView(weekView - 1)}/>
-                    <RightSquareFilled className='inc-arrow' onClick={() => setWeekView(weekView + 1)}/>
+                    <LeftOutlined className='inc-arrow' onClick={() => setWeekView(weekView - 1)} />
+                    <RightOutlined className='inc-arrow' onClick={() => setWeekView(weekView + 1)} />
                 </div>
             </div>
             <div id='planner-days'>

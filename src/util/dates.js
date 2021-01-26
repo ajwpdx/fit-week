@@ -1,6 +1,7 @@
 import { DateTime } from 'luxon'
+import {daysOfTheWeekAbrev } from './data'
 
-const daysOfTheWeekAbrev = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+// const daysOfTheWeekAbrev = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
 const today = new Date();
 
@@ -69,7 +70,7 @@ export const getWeekStart = (weekView, startDay) =>{
     let startOfWeek = DateTime.local().plus({days: dayIncrement, week: weekView})
     let endOfWeek = startOfWeek.plus({days: 6})
 
-    return startOfWeek.toFormat('LLL dd, yyyy')
+    return startOfWeek.toFormat('LLL dd')
 }
 
 export const getWeekEnd = (weekView, startDay) =>{
@@ -85,5 +86,21 @@ export const getWeekEnd = (weekView, startDay) =>{
     let startOfWeek = DateTime.local().plus({days: dayIncrement, week: weekView})
     let endOfWeek = startOfWeek.plus({days: 6})
 
-    return endOfWeek.toFormat('LLL dd, yyyy')
+    return endOfWeek.toFormat('LLL dd')
+} 
+
+export const getWeek = (weekView, startDay) =>{
+
+    let dayIncrement = 0
+
+    if (today.getDay() > startDay){
+        dayIncrement = startDay - today.getDay()
+    } else if (today.getDay() < startDay) {
+        dayIncrement = -(7 - (startDay - today.getDay()))
+    }
+
+    let startOfWeek = DateTime.local().plus({days: dayIncrement, week: weekView})
+    let endOfWeek = startOfWeek.plus({days: 6})
+
+    return startOfWeek.toFormat('LLL dd') + " - " + endOfWeek.toFormat('LLL dd')
 } 

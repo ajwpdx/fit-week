@@ -4,7 +4,7 @@ const PlannerWorkout = (props) => {
 
     return (
         <div className='planner-workout'>
-            <h3>Sample Workout</h3>
+            <h4>Sample Workout</h4>
             <p>Sample Workout</p>
         </div>
     )
