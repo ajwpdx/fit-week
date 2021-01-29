@@ -1,27 +1,37 @@
 .planner-workout {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
 
-    h4{
-        padding: 0 .5rem;
-        border-bottom: 1px solid black;
-    }
-
-    p{
-
-        padding: .5rem;
-    }
-
-.sets {
+  h4 {
     padding: 0 0.5rem;
-}
+    border-bottom: 1px solid black;
+  }
 
+  p {
+    padding: 0.5rem;
+  }
+
+  .sets-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .sets {
+      padding: 0 0.5rem;
+      margin: 0.1rem;
+      border: 1px solid black;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: $color-gray;
+    }
+  }
 }
 
 .generic {
-    border: none;
+  border: none;
 }

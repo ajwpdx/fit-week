@@ -17,7 +17,7 @@ export const exampleDistance1 = {
 }
 
 export const exampleTime1 = {
-    title: "20 min swim",
+    title: "Easy Swim",
     workoutId: 522,
     time: "00:20:00",
     distance: null,
@@ -34,7 +34,7 @@ export const exampleSetReps1 = {
     time: null,
     distance: null,
     distanceMeasurement: null,
-    setsOfReps: [5,5,5,3,1],
+    setsOfReps: [{reps: 5, weight: 75, status: "none"},{reps: 5, weight: 75, status: "none"},{reps: 5, weight: 75, status: "none"},{reps: 5, weight: 75, status: "none"},{reps: 5, weight: 75, status: "none"}],
     notes: "Build up to 245lbs or personal best",
     category: 4,
     status: "partial"
