@@ -17,18 +17,33 @@
 
   .sets-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-direction: column;
+    // flex-wrap: wrap;
+    align-items: start;
 
-    .sets {
-      padding: 0 0.5rem;
-      margin: 0.1rem;
-      border: 1px solid black;
-      border-radius: 5px;
-      cursor: pointer;
-      background-color: $color-gray;
+
+    .set{
+
+        display: flex;
+        flex-direction: row;
+
+        .set-number{
+            font-weight: bold;
+            text-align: center;
+            width: 2.5rem;
+            color: white;
+        }
+        .set-details {
+
+            padding: 0.2rem 0.5rem;
+            margin: 0.2rem 0.1rem;
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: $color-gray;
+          }
     }
+
   }
 }
 
