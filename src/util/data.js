@@ -6,33 +6,38 @@ export const exampleCategories = ["Running", "Biking", "Swimming", "Yoga", "Stre
 
 export const exampleDistance1 = {
     title: "Long Run",
-    dateId: 521,
+    workoutId: 521,
     time: null,
     distance: 12,
     distanceMeasurement: "mi",
     setsOfReps: null,
-    Notes: "Leif Erickson out and back",
-    category: 0
+    notes: "Leif Erickson out and back",
+    category: 0,
+    status: "success"
 }
 
 export const exampleTime1 = {
     title: "20 min swim",
-    dateId: 522,
+    workoutId: 522,
     time: "00:20:00",
     distance: null,
     distanceMeasurement: null,
     setsOfReps: null,
-    Notes: "Freestyle and breaststroke interchange",
-    category: 2
+    notes: "Freestyle and breaststroke interchange",
+    category: 2,
+    status: "fail"
 }
 
 export const exampleSetReps1 = {
     title: "Barbell Squat",
-    dateId: 525,
+    workoutId: 525,
     time: null,
     distance: null,
     distanceMeasurement: null,
     setsOfReps: [5,5,5,3,1],
-    Notes: "Build up to 245lbs or personal best",
-    category: 4
+    notes: "Build up to 245lbs or personal best",
+    category: 4,
+    status: "partial"
 }
+
+export const myWorkouts = [exampleDistance1, exampleTime1, exampleSetReps1]
