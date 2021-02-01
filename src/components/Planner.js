@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { getDayType, getDayOfWeek, getWeek } from "../util/dates"
 import PlannerWorkout from './PlannerWorkout'
-import { LeftOutlined, RightOutlined, LeftSquareFilled, RightSquareFilled } from '@ant-design/icons'
+import { LeftOutlined, RightOutlined } from '@ant-design/icons'
 import { myWorkouts } from "../util/data"
+import AddWorkout from './AddWorkout'
 
 const Planner = (props) => {
 
@@ -31,7 +32,7 @@ const Planner = (props) => {
                             return <PlannerWorkout key={workout.workoutId} workout={workout} />
 
                         })}
-
+                        <AddWorkout />
                     </div>
                 </div>
                 <div className={"planner-day " + getDayType(weekView, props.startDay, 1)}>
@@ -41,6 +42,7 @@ const Planner = (props) => {
                             return <PlannerWorkout key={workout.workoutId} workout={workout} />
 
                         })}
+                        <AddWorkout />
                     </div>
                 </div>
                 <div className={"planner-day " + getDayType(weekView, props.startDay, 2)}>
@@ -50,6 +52,7 @@ const Planner = (props) => {
                             return <PlannerWorkout key={workout.workoutId} workout={workout} />
 
                         })}
+                        <AddWorkout />
                     </div>
                 </div>
                 <div className={"planner-day " + getDayType(weekView, props.startDay, 3)}>
@@ -59,6 +62,7 @@ const Planner = (props) => {
                             return <PlannerWorkout key={workout.workoutId} workout={workout} />
 
                         })}
+                        <AddWorkout />
                     </div>
                 </div>
                 <div className={"planner-day " + getDayType(weekView, props.startDay, 4)}>
@@ -68,6 +72,7 @@ const Planner = (props) => {
                             return <PlannerWorkout key={workout.workoutId} workout={workout} />
 
                         })}
+                        <AddWorkout />
                     </div>
                 </div>
                 <div className={"planner-day " + getDayType(weekView, props.startDay, 5)}>
@@ -77,6 +82,7 @@ const Planner = (props) => {
                             return <PlannerWorkout key={workout.workoutId} workout={workout} />
 
                         })}
+                        <AddWorkout />
                     </div>
                 </div>
                 <div className={"planner-day " + getDayType(weekView, props.startDay, 6)}>
@@ -86,6 +92,7 @@ const Planner = (props) => {
                             return <PlannerWorkout key={workout.workoutId} workout={workout} />
 
                         })}
+                        <AddWorkout />
                     </div>
                 </div>
             </div>
