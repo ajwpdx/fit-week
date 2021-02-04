@@ -50,6 +50,12 @@ body {
 
   }
 
+  input{
+    padding: 1rem;
+    border-radius: 5px;
+    border:1px solid black;
+  }
+
   button{
     background-color: $color-blue;
     font-weight: bold;
