@@ -10,7 +10,9 @@ const Header = (props) => {
             <h1>
                 FIT WEEK
         </h1>
-        <nav>
+        <nav className='header-nav'>
+            <a href='/Workout-Plans'>Programs</a>
+            <a href='/Connect'>Connect</a>
             <UserIcon/>
         </nav>
         </header>

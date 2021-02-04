@@ -1,4 +1,5 @@
 header{
+    color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -10,14 +11,19 @@ header{
         color: $color-white;
     }
 
-.setting-icon{
-    font-size: 3rem;
-    color: white;
-    cursor: pointer;
-}
-    a {
-        font-size: 2rem;
+.header-nav{
+    width: 300px;
 
+    .setting-icon{
+        font-size: 3rem;
+        color: white;
+        cursor: pointer;
     }
+        a {
+            font-size: 2rem;
+    
+        }
+}
+
 
 }

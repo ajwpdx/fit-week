@@ -13,6 +13,7 @@ const SavedWorkouts = (props) => {
             <h2>My Workouts</h2>
             <form>
                 <input
+                autoComplete='off'
                 placeholder='Find workouts'
                 name='search'
                 type='text'
