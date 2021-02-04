@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import { getDayType, getDayOfWeek, getWeek } from "../util/dates"
+import { getDayType, getDayOfWeek, getWeek, getYear } from "../util/dates"
 import PlannerWorkout from './PlannerWorkout'
 import { LeftOutlined, RightOutlined } from '@ant-design/icons'
 import { myWorkouts } from "../util/data"
@@ -14,8 +14,9 @@ const Planner = (props) => {
     return (
         <section id='planner'>
             <div className='planner-header'>
-                <button className='create-workout'>Create Workout</button>
+                <button className='create-workout'>New Workout</button>
                 <div className='time-period'>
+                    <h3>{getYear(weekView,props.startDay)}</h3>
                     <h2>{getWeek(weekView, props.startDay)}</h2>
                 </div>
                 <div className='increment-arrows'>

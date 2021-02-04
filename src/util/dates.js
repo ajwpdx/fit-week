@@ -104,3 +104,24 @@ export const getWeek = (weekView, startDay) =>{
 
     return startOfWeek.toFormat('LLL dd') + " - " + endOfWeek.toFormat('LLL dd')
 } 
+
+export const getYear = (weekView, startDay) => {
+
+    let dayIncrement = 0
+
+    if (today.getDay() > startDay){
+        dayIncrement = startDay - today.getDay()
+    } else if (today.getDay() < startDay) {
+        dayIncrement = -(7 - (startDay - today.getDay()))
+    }
+
+    let startOfWeek = DateTime.local().plus({days: dayIncrement, week: weekView})
+    let endOfWeek = startOfWeek.plus({days: 6})
+
+    if (startOfWeek.toFormat('yyyy') === endOfWeek.toFormat('yyyy')){
+
+        return startOfWeek.toFormat('yyyy')
+    } else {
+        return startOfWeek.toFormat('yyyy') + " - " + endOfWeek.toFormat('yyyy')
+    }
+}
