@@ -4,6 +4,8 @@ export const daysOfTheWeekAbrev = ["Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat
 
 export const exampleCategories = ["Running", "Biking", "Swimming", "Yoga", "Strength", "Physical Therapy"]
 
+export const workoutTypes = ["Sets", "Multi-Sets", "Distance", "For Time", "EMOM", "AMRAP", ]
+
 export const exampleDistance1 = {
     title: "Long Run",
     workoutId: 521,

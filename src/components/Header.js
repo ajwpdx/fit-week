@@ -8,7 +8,7 @@ const Header = (props) => {
     return (
         <header>
             <h1>
-                FIT WEEK
+                W/O Plan
         </h1>
         <nav className='header-nav'>
             <a href='/Workout-Plans'>Programs</a>
