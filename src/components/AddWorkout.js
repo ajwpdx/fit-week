@@ -1,12 +1,12 @@
 import React from 'react'
-import {PlusCircleOutlined, PlusOutlined} from '@ant-design/icons'
+import { PlusCircleOutlined, PlusOutlined } from '@ant-design/icons'
 
 const AddWorkout = () => {
 
 
     return (
         <div className='add-workout'>
-            <PlusOutlined/>
+            <h4>+ New Workout</h4>
         </div>
     )
 }

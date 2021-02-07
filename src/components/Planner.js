@@ -5,16 +5,25 @@ import PlannerWorkout from './PlannerWorkout'
 import { LeftOutlined, RightOutlined } from '@ant-design/icons'
 import { myWorkouts } from "../util/data"
 import AddWorkout from './AddWorkout'
+import WorkoutForm from './WorkoutForm'
 
 const Planner = (props) => {
 
     const [weekView, setWeekView] = useState(0)
     const [workouts, setWorkouts] = useState(myWorkouts)
+    const [createWO, setCreateWO] = useState(false)
+
+    const createNewWO = () => {
+        setCreateWO(true)
+        console.log('create')
+    } 
 
     return (
+        
         <section id='planner'>
+            <WorkoutForm createWO={createWO}/>
             <div className='planner-header'>
-                <button className='create-workout'>New Workout</button>
+                <button className='create-workout'onClick={createNewWO}>New Workout</button>
                 <div className='time-period'>
                     <h3>{getYear(weekView,props.startDay)}</h3>
                     <h2>{getWeek(weekView, props.startDay)}</h2>

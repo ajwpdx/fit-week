@@ -20,8 +20,6 @@ export const getDayType = (weekView, startDay, position) => {
             dayIncrement = -(7 - (startDay - today.getDay()))
         }
 
-        console.log(dayIncrement)
-
         if (dayIncrement + position > 0) {
             return "future-date"
         } else if (dayIncrement + position < 0) {
