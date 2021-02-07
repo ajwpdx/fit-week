@@ -12,8 +12,10 @@ const Planner = (props) => {
     const [weekView, setWeekView] = useState(0)
     const [workouts, setWorkouts] = useState(myWorkouts)
     const [createWO, setCreateWO] = useState(false)
+    const [WOFormPosition, setWOFormPosition] = useState({left: 200, top: 0})
 
-    const createNewWO = () => {
+    const createNewWO = (evt) => {
+        setWOFormPosition({left: evt.pageX, top: evt.pageY})
         setCreateWO(true)
         console.log('create')
     } 
@@ -21,7 +23,7 @@ const Planner = (props) => {
     return (
         
         <section id='planner'>
-            <WorkoutForm createWO={createWO}/>
+            <WorkoutForm createWO={createWO} WOFormPosition={WOFormPosition}/>
             <div className='planner-header'>
                 <button className='create-workout'onClick={createNewWO}>New Workout</button>
                 <div className='time-period'>
