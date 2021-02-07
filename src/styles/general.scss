@@ -69,13 +69,13 @@ body {
     font-weight: bold;
     color: white;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 7px;
     box-shadow: inset;
     cursor: pointer;
     font-size: 1.5rem;
 
     &:hover{
-      opacity: 75%;
+      box-shadow: 1px 1px 1px 1px rgba(25,25,0,0.4);
     }
 
 

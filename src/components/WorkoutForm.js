@@ -17,7 +17,7 @@ const WorkoutForm = (props) => {
     }
 
     return (
-    <div className={props.createWO ? "workout-form": "workout-form hidden" } style={props.WOFormPosition}>
+    <div className={props.creatingWO ? "workout-form": "workout-form hidden" } style={props.WOFormPosition}>
         <form>
             <input
             name="title"
