@@ -16,9 +16,13 @@ const WorkoutForm = (props) => {
         setNewWorkout({...newWorkout, [name]:value,})
     }
 
+    const saveWorkout = (evt) => {
+        evt.preventDefault()
+    }
+
     return (
 
-        <form className={props.creatingWO ? "workout-form": "workout-form hidden" } style={props.WOFormPosition}>
+        <form className={props.creatingWO ? "workout-form": "workout-form hidden" } style={props.WOFormPosition} onSubmit={saveWorkout}>
             <input
             name="title"
             className="wo-title"
