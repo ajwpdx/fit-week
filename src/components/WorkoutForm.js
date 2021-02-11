@@ -17,17 +17,29 @@ const WorkoutForm = (props) => {
     }
 
     return (
-    <div className={props.creatingWO ? "workout-form": "workout-form hidden" } style={props.WOFormPosition}>
-        <form>
+
+        <form className={props.creatingWO ? "workout-form": "workout-form hidden" } style={props.WOFormPosition}>
             <input
             name="title"
-            placeholder="title"
+            className="wo-title"
+            placeholder="Workout Title"
             value={newWorkout.title}
             onChange={handleChange}
 
             />
+
+            <input
+            name="notes"
+            className="wo-notes"
+            placeholder="Add notes"
+
+            />
+            <div className='form-btns'>
+            <button className='save'>Save</button>
+            <button className='cancel'>Cancel</button>
+            </div>
         </form>
-    </div>
+
     )
 
 }
