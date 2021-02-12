@@ -41,17 +41,19 @@ const WorkoutForm = (props) => {
                 placeholder="Workout Title"
                 value={newWorkout.title}
                 onChange={handleChange}
+                autoComplete='off'
 
             />
             <div className='wo-notes'>
-                <div className="add-note-icon" onClick={addNotes}>
+                <div className={hasNotes ? "add-note-icon hidden" : "add-note-icon"} onClick={addNotes}>
                     <FontAwesomeIcon icon={faPlus} className='icon plus-i' />
                     <FontAwesomeIcon icon={faStickyNote} className='icon' />
                 </div>
-                <input
+                <textarea
                     name="notes"
                     placeholder="Add notes"
-                    className={hasNotes ? "notes-field" : "notes-field hidden"}
+                    className={hasNotes ? "notes-field tall-input" : "notes-field tall-input hidden"}
+                    autoComplete='off'
 
                 />
             </div>

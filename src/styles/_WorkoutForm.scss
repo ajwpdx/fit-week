@@ -6,9 +6,10 @@
     background-color: $color-white;
     box-shadow: $box-shadow-main;
     border-radius: 7px;
-    padding: 3rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
+    resize: both;
     
 
     .wo-title{
