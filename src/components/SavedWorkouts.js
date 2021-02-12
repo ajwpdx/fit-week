@@ -15,7 +15,7 @@ const SavedWorkouts = (props) => {
             <h2>My Workouts</h2>
 
             <form>
-                <FontAwesomeIcon icon={faSearch} className='icon' />
+                <FontAwesomeIcon icon={faSearch} className='search-i icon' />
                 <input
                     autoComplete='off'
                     placeholder='Find workouts'

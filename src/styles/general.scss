@@ -5,7 +5,6 @@ body {
     transition: color 0.5s ease;
     font-family: $font-text
 
-
   }
   
   h1 {
@@ -51,9 +50,14 @@ body {
   }
 
   input{
-    padding: 1rem;
-    border-radius: 5px;
-    border:1px solid black;
+    padding: 1rem .5rem;
+    // border-radius: 5px;
+    border: none;
+    border-bottom:1px solid black;
+
+    &:focus{
+      outline: none;
+    }
   }
 
   nav{
@@ -68,7 +72,7 @@ body {
     background-color: $color-blue;
     font-weight: bold;
     color: white;
-    padding: 15px;
+    padding: 1rem;
     border-radius: 7px;
     box-shadow: inset;
     cursor: pointer;
