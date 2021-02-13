@@ -3,7 +3,7 @@ import {
     FETCH_SAVED_WORKOUTS,
     FETCH_CURRENT_WORKOUTS
 
-} from '../actions'
+} from '../redux-actions'
 
 export const intitalApplicationState = {
 

@@ -7,7 +7,7 @@ const Header = (props) => {
 
     return (
         <header>
-            <h1>
+            <h1 className='header-logo'>
                 W/O Plan
         </h1>
             <nav className='header-nav'>

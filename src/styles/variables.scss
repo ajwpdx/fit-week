@@ -5,18 +5,22 @@ $font-title: 'Bungee Outline', serif;
 $font-headers: 'Poppins', serif;
 $font-text: 'Poppins', serif;
 
+$color-hot-pink: #FD3972;
 $color-blue: #39ABFD;
-$color-orange: #ea6227;
-$color-yellow: #F3D849;
+$color-dark-blue: #0A2342;
+$color-orange: #e4906c;
+$color-yellow: #eee48b;
 $color-mint: #b9ebcc;
 $color-black: #191718;
 $color-white: #F5F7F7;
 $color-gray: #E0E5E9;
-$color-hot-pink: #FD3972;
 
 $color-text: $color-black;
 $color-background: $color-white;
 $color-header: $color-hot-pink;
+$color-title: $color-white;
+$color-nav: $color-white;
+$color-buttons: $color-blue;
 
 $box-shadow-main: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 $box-shadow-active: 0 0 8px #39abfd93;

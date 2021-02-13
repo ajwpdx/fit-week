@@ -1,8 +1,8 @@
 import './styles/index.scss'
 
-import Header from './components/Header'
-import SavedWorkouts from './components/SavedWorkouts'
-import Planner from './components/Planner'
+import Header from './components/layouts/Header'
+import Planner from './components/layouts/Planner'
+import WorkoutLibrary from './components/layouts/WorkoutLibrary';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Header/>
       <div className='main-container'>
       <Planner/>
-      <SavedWorkouts/>
+      <WorkoutLibrary/>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
-const SavedWorkouts = (props) => {
+const WorkoutLibrary = (props) => {
 
     const [search, setSearch] = useState('')
 
@@ -11,11 +11,10 @@ const SavedWorkouts = (props) => {
     }
 
     return (
-        <section id='saved-workouts'>
-            <h2>My Workouts</h2>
+        <section id='workout-library'>
+            <h2 className='wo-library-title'>Workout Library</h2>
 
-            <form>
-                <FontAwesomeIcon icon={faSearch} className='search-i icon' />
+            <form className='wo-library-search'>
                 <input
                     autoComplete='off'
                     placeholder='Find workouts'
@@ -24,9 +23,12 @@ const SavedWorkouts = (props) => {
                     value={search}
                     onChange={onChange}
                 />
+                <button>
+                    <FontAwesomeIcon icon={faSearch} className='search-i icon' />
+                </button>
             </form>
         </section>
     )
 }
 
-export default SavedWorkouts
+export default WorkoutLibrary

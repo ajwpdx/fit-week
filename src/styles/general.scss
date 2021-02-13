@@ -11,7 +11,7 @@ body {
     font-family: $font-title;
     font-weight: 650;
     letter-spacing: .1rem;
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 1.2;
     color: $color-white;
   }
@@ -41,12 +41,6 @@ body {
   a {
     text-decoration: none;
     color: inherit;
-  }
-  
-  .main-container{
-      display: flex;
-      flex-direction: row;
-
   }
 
   input, textarea{
@@ -90,7 +84,30 @@ body {
     font-size: 1.5rem;
 
     &:hover{
-      box-shadow: 1px 1px 1px 1px rgba(25,25,0,0.4);
+      // box-shadow: 1px 1px 1px 1px rgba(25,25,0,0.4);
+      opacity: 80%;
     }
 
   }
+
+  .main-container{
+    display: flex;
+    flex-direction: row;
+
+}
+
+  .icon{
+    font-size: 2rem;
+    color: gray;
+    padding-right: .5rem;
+    }
+    
+    .hidden{
+        display: none
+    }
+    
+    .tall-input{
+        height: 6rem;
+        text-align: left;
+        vertical-align: top;
+    }

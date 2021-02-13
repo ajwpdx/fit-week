@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import { getDayType, getDayOfWeek, getWeek, getYear } from "../util/dates"
+import { getDayType, getDayOfWeek, getWeek, getYear } from "../../util/dates"
 import PlannerWorkout from './PlannerWorkout'
 import { LeftOutlined, RightOutlined } from '@ant-design/icons'
-import { myWorkouts } from "../util/data"
+import { myWorkouts } from "../../util/data"
 import WorkoutForm from './WorkoutForm'
 
 const Planner = (props) => {
@@ -22,7 +22,7 @@ const Planner = (props) => {
     return (
         
         <section id='planner'>
-            <WorkoutForm creatingWO={creatingWO} WOFormPosition={WOFormPosition}/>
+            <WorkoutForm creatingWO={creatingWO} setCreatingWO={setCreatingWO} WOFormPosition={WOFormPosition}/>
             <div className='planner-header'>
                 <button className='add-workout-btn'onClick={createNewWO}> + New Workout</button>
                 <div className='time-period'>

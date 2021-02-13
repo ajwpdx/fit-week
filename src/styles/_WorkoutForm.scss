@@ -1,53 +1,57 @@
+.workout-form-container {
+  position: absolute;
+  z-index: 10;
+  background-color: $color-white;
+  box-shadow: $box-shadow-main;
+  border-radius: 7px;
 
-
-.workout-form{
+  .cancel {
     position: absolute;
-    z-index: 10;
-    background-color: $color-white;
-    box-shadow: $box-shadow-main;
-    border-radius: 7px;
-    padding: 2rem;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    text-align: center;
+
+  }
+
+  .workout-form {
+    padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
-    resize: both;
-    
 
-    .wo-title{
-        margin: .5rem 0;
+    .wo-title {
+      margin: 0.5rem 0;
     }
 
+    .wo-notes {
+      display: flex;
+      flex-direction: row;
+      margin: 0.5rem 0;
 
-    .wo-notes{
+      .add-note-icon {
         display: flex;
         flex-direction: row;
-        margin: .5rem 0;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 5px;
+        padding: 5px;
 
-        .add-note-icon{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            border-radius: 5px;
-            padding: 5px;
-
-            .plus-i{
-                font-size: 1.5rem;
-            }
-
-            &:hover{
-                opacity: 50%;
-            }
-    
+        .plus-i {
+          font-size: 1.5rem;
         }
+
+        &:hover {
+          opacity: 50%;
+        }
+      }
     }
 
-    .form-btns{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin: .5rem 0;
-
+    .form-btns {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0.5rem 0;
     }
-    
+  }
 }

@@ -1,14 +1,16 @@
 header{
-    color: white;
+    color: $color-nav;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color: $color-header;
     padding:15px 30px;
+    box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.08);
 
-    h1 {
-        color: $color-white;
+    .header-logo {
+        color: $color-title;
+        cursor: pointer;
     }
 
 .header-nav{

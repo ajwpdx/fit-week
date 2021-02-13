@@ -87,7 +87,10 @@
 
       .planner-workouts-container {
         width: 100%;
-        box-shadow: 1px 1px 1px 1px rgba(25,25,0,0.4);
+        // box-shadow: 1px 1px 1px 1px rgba(25,25,0,0.4);
+        border-bottom: $border-main;
+        border-left: $border-main;
+        border-top: $border-main;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -96,7 +99,7 @@
         // overflow-x: hidden;
 
         .add-workout-btn{
-          margin: 5px 5px 0;
+          margin: 5px 5px;
         }
 
       }
@@ -107,7 +110,7 @@
 .past-date {
   .planner-workouts-container {
     opacity: 45%;
-    background-color: white;
+    background-color: $color-white;
   }
 }
 
@@ -116,15 +119,15 @@
     background-color: $color-hot-pink;
     padding: 0 10px;
     border-radius: 15px;
-    color: white;
+    color: $color-white;
   }
   .planner-workouts-container {
-    background-color: white;
+    background-color: $color-white;
   }
 }
 
 .future-date {
   .planner-workouts-container {
-    background-color: white;
+    background-color: $color-white;
   }
 }
