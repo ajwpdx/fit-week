@@ -1,0 +1,42 @@
+#workout-library {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  padding: 20px;
+  border-left: $border-main;
+  overflow: hidden;
+
+  .wo-library-title {
+    border-bottom: 1px solid black;
+    line-height: 2;
+    margin-bottom: 1rem;
+  }
+
+  .wo-library-search {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+
+    input{
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+        // box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+        border: 1px solid $color-blue;
+    }
+
+    .search-i{
+        color: white;
+    }
+  }
+}

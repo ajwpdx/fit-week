@@ -1,0 +1,133 @@
+#planner {
+  width: 85%;
+  // border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .hidden{
+    display: none
+}
+  
+  .planner-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    width: 100%;
+
+    .create-workout{
+      margin: 10px;
+    }
+    .time-period {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 10px;
+
+      h3{
+        border-bottom: 1px solid black;
+        margin-bottom: 1rem;
+      }
+    }
+    .increment-arrows {
+      display: flex;
+      flex-direction: row;
+      margin: 10px;
+
+      .inc-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: white;
+        background-color: $color-blue;
+        padding: 7px;
+        border-radius: 10px;
+        margin: 2px;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:hover {
+          opacity: 75%;
+        }
+      }
+    }
+  }
+
+  #planner-days {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    // width: 100%;
+    min-width: 700px;
+    // overflow: scroll;
+    // overflow-y: hidden;
+
+    .planner-day {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 15%;
+
+
+      .planner-day-title {
+        padding: 1rem;
+        margin: 1rem 0;
+      }
+
+      h3 {
+        padding-bottom: 1rem;
+      }
+
+      .planner-workouts-container {
+        width: 100%;
+        // box-shadow: 1px 1px 1px 1px rgba(25,25,0,0.4);
+        border-bottom: $border-main;
+        border-left: $border-main;
+        border-top: $border-main;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // height: 100px;
+        // overflow: scroll;
+        // overflow-x: hidden;
+
+        .add-workout-btn{
+          margin: 5px 5px;
+        }
+
+      }
+    }
+  }
+}
+
+.past-date {
+  .planner-workouts-container {
+    opacity: 45%;
+    background-color: $color-white;
+  }
+}
+
+.current-date {
+  .planner-day-title {
+    background-color: $color-hot-pink;
+    padding: 0 10px;
+    border-radius: 15px;
+    color: $color-white;
+  }
+  .planner-workouts-container {
+    background-color: $color-white;
+  }
+}
+
+.future-date {
+  .planner-workouts-container {
+    background-color: $color-white;
+  }
+}
