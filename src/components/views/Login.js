@@ -1,14 +1,14 @@
 import React from 'react'
 
 //components - layouts
-import Header from '../layouts/Header'
+import LoginHeader from '../layouts/LoginHeader'
 import LoginForm from '../layouts/LoginForm'
 
 const Login = (props) => {
 
     return (
         <div id='login'>
-            <Header />
+            <LoginHeader />
             <LoginForm/>
         </div>
 
