@@ -1,0 +1,27 @@
+.login-form {
+  background-color: rgba(0,0,0,.5);
+  width: 300px;
+  margin: 200px auto;
+  text-align: center;
+  border-radius: 7px;
+  
+
+  h2 {
+    color: white;
+    padding: 1rem;
+    background-color: $color-hot-pink;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    input, button {
+      width: 85%;
+      margin: 1rem auto;
+    }
+  }
+}
