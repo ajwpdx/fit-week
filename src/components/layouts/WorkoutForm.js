@@ -3,6 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStickyNote, faPlus, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 
+import Movement from "./Movement"
+
+
 const initialWO = {
     title: "",
     notes: "",
@@ -39,8 +42,8 @@ const WorkoutForm = (props) => {
 
         <div className={props.creatingWO ? "workout-form-container" : "workout-form-container hidden"} style={props.WOFormPosition}>
 
-            <FontAwesomeIcon icon={faTimes} className='icon cancel' onClick={cancelWorkout}/>
-            <form className="workout-form"  onSubmit={saveWorkout}>
+            <FontAwesomeIcon icon={faTimes} className='icon cancel' onClick={cancelWorkout} />
+            <form className="workout-form" onSubmit={saveWorkout}>
                 <input
                     name="title"
                     className="wo-title"
@@ -64,6 +67,8 @@ const WorkoutForm = (props) => {
 
                     />
                 </div>
+
+                <Movement/>
                 <div className='form-btns'>
                     <button className='save'>Save</button>
                     {/* <button className='cancel' onSubmit={cancelWorkout}>Cancel</button> */}

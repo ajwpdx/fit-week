@@ -3,10 +3,16 @@
 @import './mixins.scss';
 @import './general.scss';
 @import './categories.scss';
+
+//layouts
 @import './layouts/Header';
 @import './layouts/WorkoutLibrary';
 @import './layouts/Planner';
 @import './layouts/PlannerWorkout';
 @import './layouts/UserIcon';
 @import './layouts/WorkoutForm';
-@import './views/MyPlan.scss'
+
+
+//views
+@import './views/Login.scss';
+@import './views/MyPlan.scss';

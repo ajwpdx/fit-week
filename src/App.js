@@ -1,14 +1,41 @@
-import './styles/index.scss'
+import React from 'react'
 
-import Header from './components/layouts/Header'
-import Planner from './components/layouts/Planner'
-import WorkoutLibrary from './components/layouts/WorkoutLibrary';
+//router
+import { Route, Redirect, Switch } from 'react-router-dom';
+
+//component - views
 import MyPlan from './components/views/MyPlan';
+import Login from './components/views/Login'
+import Signup from './components/views/Signup'
+
+//styles
+import './styles/index.scss'
 
 function App() {
   return (
+    
     <div className="App">
-      <MyPlan/>
+
+      <Switch>
+
+        <Route exact path='/'>
+          <Redirect from='/' to='/my-plan' />
+        </Route>
+        
+        <Route path="/my-plan" component={MyPlan} />
+
+
+        <Route>
+          <Login path='/login' />
+        </Route>
+
+
+        <Route>
+          <Signup path='/signup' />
+        </Route>
+
+
+      </Switch>
     </div>
   );
 }
