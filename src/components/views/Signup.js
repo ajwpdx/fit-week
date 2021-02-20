@@ -7,7 +7,7 @@ const Signup = (props) => {
     return (
 
         <div id="signup">
-            <Header/>
+            <Header view="signup"/>
         </div>
     )
 

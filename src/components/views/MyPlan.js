@@ -8,7 +8,7 @@ const MyPlan = (props) => {
 
     return (
         <div id='my-plan'>
-            <Header />
+            <Header view="my-plan"/>
             <div className='my-plan-body'>
             <Planner />
             <WorkoutLibrary />

@@ -10,6 +10,7 @@ export const intitalApplicationState = {
     isLoading: false, 
     savedWorkouts: [],
     startDay: 1,
+    loggedIn: true,
 
 }
 
