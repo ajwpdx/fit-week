@@ -24,16 +24,9 @@ function App() {
         
         <Route path="/my-plan" component={MyPlan} />
 
+        <Route path="/signup" component={Signup}/>
 
-        <Route>
-          <Login path='/login' />
-        </Route>
-
-
-        <Route>
-          <Signup path='/signup' />
-        </Route>
-
+        <Route path="/login" component={Login}/>
 
       </Switch>
     </div>
