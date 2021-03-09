@@ -9,11 +9,10 @@ const Header = (props) => {
 
     return (
         <header>
-            <h1 className='header-logo'>
-                W/O Plan
-
-        </h1>
-        <HeaderNav view={props.view}/>
+            <div className='header-content-container'>
+                <h1 className='header-logo'>W/O Plan</h1>
+                <HeaderNav view={props.view} />
+            </div>
         </header>
     )
 
