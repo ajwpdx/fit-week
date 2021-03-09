@@ -5,9 +5,11 @@ import PlannerWorkout from './PlannerWorkout'
 import { LeftOutlined, RightOutlined } from '@ant-design/icons'
 import { myWorkouts } from "../../util/data"
 import WorkoutForm from './WorkoutForm'
+import { useHistory } from 'react-router'
 
 const Planner = (props) => {
-
+    //hooks
+    const history = useHistory()
     const [weekView, setWeekView] = useState(0)
     const [workouts, setWorkouts] = useState(myWorkouts)
     const [creatingWO, setCreatingWO] = useState(false)
@@ -19,12 +21,16 @@ const Planner = (props) => {
         console.log('create')
     } 
 
+    const toCreateWorkout = () =>{
+        history.push('/create-workout')
+    }
+
     return (
         
         <section id='planner'>
             <WorkoutForm creatingWO={creatingWO} setCreatingWO={setCreatingWO} WOFormPosition={WOFormPosition}/>
             <div className='planner-header'>
-                <button className='add-workout-btn'onClick={createNewWO}> + New Workout</button>
+                <button className='add-workout-btn'onClick={toCreateWorkout}> + New Workout</button>
                 <div className='time-period'>
                     <h3>{getYear(weekView,props.startDay)}</h3>
                     <h2>{getWeek(weekView, props.startDay)}</h2>

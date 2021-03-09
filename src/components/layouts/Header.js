@@ -9,10 +9,10 @@ const Header = (props) => {
 
     return (
         <header>
-            <div className='header-content-container'>
+            <nav className='header-nav-container'>
                 <h1 className='header-logo'>W/O Plan</h1>
                 <HeaderNav view={props.view} />
-            </div>
+            </nav>
         </header>
     )
 

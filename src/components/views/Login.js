@@ -8,7 +8,7 @@ const Login = (props) => {
 
     return (
         <div id='login'>
-            
+            <Header view="login"/>
             <LoginForm/>
         </div>
 

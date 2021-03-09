@@ -8,7 +8,7 @@ const CreateWorkout = (props) => {
 
         <div id="create-workout">
             <Header/>
-            <h1>Create Workout</h1>
+            <h2>Create Workout</h2>
             <WorkoutForm/>
         </div>
 

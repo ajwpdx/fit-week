@@ -1,9 +1,10 @@
 header {
   color: $color-nav;
-  background-color: $color-header;
-  padding: 15px 50px;
-  box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.08);
-  .header-content-container {
+  background: $color-header;
+  padding: 0 50px;
+  box-shadow: $box-shadow-main;
+
+  .header-nav-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -18,14 +19,55 @@ header {
     }
 
     .header-nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .nav-item {
+        .nav-link {
+          font-size: 1.6rem;
+          display: block;
+          padding: 1.5rem;
+        }
+
+        .dropdown-links {
+          background-color: #fff;
+          position: absolute;
+          display: none;
+          max-height: 445px;
+          overflow-x: hidden;
+          overflow-y: auto;
+          color: $color-text;
+          background-color: $color-background;
+          font-size: 1.6rem;
+
+          a {
+            font-size: 1.4rem;
+            display: block;
+            padding: 1.5rem;
+          }
+        }
+        &:hover {
+          background: $color-background;
+          color: $color-black;
+          .dropdown-links {
+            display: block;
+            box-shadow: $box-shadow-main;
+
+            a{
+              &:hover{
+                background-color: $color-gray;
+              }
+            }
+          }
+        }
+      }
+
       .setting-icon {
         font-size: 3rem;
         color: white;
         cursor: pointer;
-      }
-      a {
-        font-size: 1.6rem;
-        margin: 0 2rem;
       }
     }
   }
