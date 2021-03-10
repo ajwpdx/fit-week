@@ -1,11 +1,15 @@
 import React from 'react'
 
-const LoginForm = (props) => {
+const SignupForm = (props) => {
 
     return (
         <div className='login-signup-form'>
-            <h2>Log In</h2>
+            <h2>Sign Up</h2>
             <form>
+                <input
+                    name='email'
+                    placeholder='email'
+                />
                 <input
                     name='username'
                     placeholder='username'
@@ -14,12 +18,16 @@ const LoginForm = (props) => {
                     name='password'
                     placeholder='password'
                 />
+                <input
+                    name='confirm-password'
+                    placeholder='confirm password'
+                />
                 <button>
-                    Log In
+                    Sign Up
                 </button>
             </form>
         </div>
     )
 }
 
-export default LoginForm
+export default SignupForm

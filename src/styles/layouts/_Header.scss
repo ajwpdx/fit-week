@@ -86,6 +86,12 @@ header {
         color: white;
         cursor: pointer;
       }
+
+      .header-btn{
+        margin: 1.5rem;
+        background: $color-background;
+        color: $color-dark-blue;
+      }
     }
   }
 }

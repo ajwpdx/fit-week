@@ -19,13 +19,13 @@ const HeaderNav = (props) => {
   if (props.view === "login") {
     return (
       <nav className="header-nav">
-        <button onClick={toSignup}>Sign Up</button>
+        <button className='header-btn signup' onClick={toSignup}>Sign Up</button>
       </nav>
     );
   } else if (props.view === "signup") {
     return (
       <nav className="header-nav">
-        <button onClick={toLogin}>Log In</button>
+        <button className='header-btn login' onClick={toLogin}>Log In</button>
       </nav>
     );
   } else {
