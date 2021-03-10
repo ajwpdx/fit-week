@@ -1,6 +1,9 @@
 import React from "react";
 import { useHistory } from "react-router";
 import UserIcon from "./UserIcon";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+
 
 const HeaderNav = (props) => {
   const history = useHistory()
@@ -31,7 +34,10 @@ const HeaderNav = (props) => {
         <ul className="header-nav">
           <li className='nav-item'><a className='nav-link' href="/my-plan">My Plan</a></li>
           <li className='nav-item'><a className='nav-link' href="/wo-library">W/O Library</a></li>
-          <li className='nav-item'><a className='nav-link' href="/Workout-Plans">Programs</a>
+          <li className='nav-item'><a className='nav-link' href="/Workout-Plans">Programs
+          <FontAwesomeIcon icon={faChevronDown} className='icon dropdown-arrow'/>
+          </a>
+          
             <ul className='dropdown-links'>
                 <li><a href="/Workout-Plans">Find Programs</a></li>
                 <li><a href="/Workout-Plans">Program Builder</a></li>

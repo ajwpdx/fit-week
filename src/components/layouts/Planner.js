@@ -5,6 +5,7 @@ import PlannerWorkout from './PlannerWorkout'
 import { LeftOutlined, RightOutlined } from '@ant-design/icons'
 import { myWorkouts } from "../../util/data"
 import WorkoutForm from './WorkoutForm'
+import PlannerDay from './PlannerDay'
 import { useHistory } from 'react-router'
 
 const Planner = (props) => {
@@ -13,26 +14,26 @@ const Planner = (props) => {
     const [weekView, setWeekView] = useState(0)
     const [workouts, setWorkouts] = useState(myWorkouts)
     const [creatingWO, setCreatingWO] = useState(false)
-    const [WOFormPosition, setWOFormPosition] = useState({left: 200, top: 200})
+    const [WOFormPosition, setWOFormPosition] = useState({ left: 200, top: 200 })
 
     const createNewWO = (evt) => {
-        setWOFormPosition({left: evt.target.offsetLeft + 25, top: evt.target.parentElement.offsetTop + 25})
+        setWOFormPosition({ left: evt.target.offsetLeft + 25, top: evt.target.parentElement.offsetTop + 25 })
         setCreatingWO(true)
         console.log('create')
-    } 
+    }
 
-    const toCreateWorkout = () =>{
+    const toCreateWorkout = () => {
         history.push('/create-workout')
     }
 
     return (
-        
+
         <section id='planner'>
-            <WorkoutForm creatingWO={creatingWO} setCreatingWO={setCreatingWO} WOFormPosition={WOFormPosition}/>
+            <WorkoutForm creatingWO={creatingWO} setCreatingWO={setCreatingWO} WOFormPosition={WOFormPosition} />
             <div className='planner-header'>
-                <button className='add-workout-btn'onClick={toCreateWorkout}> + New Workout</button>
+                <button className='add-workout-btn' onClick={toCreateWorkout}>Create Workout</button>
                 <div className='time-period'>
-                    <h3>{getYear(weekView,props.startDay)}</h3>
+                    <h3>{getYear(weekView, props.startDay)}</h3>
                     <h2>{getWeek(weekView, props.startDay)}</h2>
                 </div>
                 <div className='increment-arrows'>
@@ -41,77 +42,14 @@ const Planner = (props) => {
                 </div>
             </div>
             <div id='planner-days'>
-                <div className={"planner-day " + getDayType(weekView, props.startDay, 0)}>
-                    <h3 className='planner-day-title'> {getDayOfWeek(weekView, props.startDay, 0)}</h3>
-                    <div className="planner-workouts-container">
-
-                        {workouts.map((workout) => {
-                            return <PlannerWorkout key={workout.workoutId} workout={workout} />
-
-                        })}
-                        <button className='add-workout-btn'onClick={createNewWO}> + New Workout</button>
-                    </div>
-                </div>
-                <div className={"planner-day " + getDayType(weekView, props.startDay, 1)}>
-                    <h3 className='planner-day-title'>{getDayOfWeek(weekView, props.startDay, 1)}</h3>
-                    <div className="planner-workouts-container">
-                        {workouts.map((workout) => {
-                            return <PlannerWorkout key={workout.workoutId} workout={workout} />
-
-                        })}
-                        <button className='add-workout-btn'onClick={createNewWO}> + New Workout</button>
-                    </div>
-                </div>
-                <div className={"planner-day " + getDayType(weekView, props.startDay, 2)}>
-                    <h3 className='planner-day-title'>{getDayOfWeek(weekView, props.startDay, 2)}</h3>
-                    <div className="planner-workouts-container">
-                        {workouts.map((workout) => {
-                            return <PlannerWorkout key={workout.workoutId} workout={workout} />
-
-                        })}
-                        <button className='add-workout-btn'onClick={createNewWO}> + New Workout</button>
-                    </div>
-                </div>
-                <div className={"planner-day " + getDayType(weekView, props.startDay, 3)}>
-                    <h3 className='planner-day-title'>{getDayOfWeek(weekView, props.startDay, 3)}</h3>
-                    <div className="planner-workouts-container">
-                        {workouts.map((workout) => {
-                            return <PlannerWorkout key={workout.workoutId} workout={workout} />
-
-                        })}
-                        <button className='add-workout-btn'onClick={createNewWO}> + New Workout</button>
-                    </div>
-                </div>
-                <div className={"planner-day " + getDayType(weekView, props.startDay, 4)}>
-                    <h3 className='planner-day-title'>{getDayOfWeek(weekView, props.startDay, 4)}</h3>
-                    <div className="planner-workouts-container">
-                        {workouts.map((workout) => {
-                            return <PlannerWorkout key={workout.workoutId} workout={workout} />
-
-                        })}
-                        <button className='add-workout-btn'onClick={createNewWO}> + New Workout</button>
-                    </div>
-                </div>
-                <div className={"planner-day " + getDayType(weekView, props.startDay, 5)}>
-                    <h3 className='planner-day-title'>{getDayOfWeek(weekView, props.startDay, 5)}</h3>
-                    <div className="planner-workouts-container">
-                        {workouts.map((workout) => {
-                            return <PlannerWorkout key={workout.workoutId} workout={workout} />
-
-                        })}
-                        <button className='add-workout-btn'onClick={createNewWO}> + New Workout</button>
-                    </div>
-                </div>
-                <div className={"planner-day " + getDayType(weekView, props.startDay, 6)}>
-                    <h3 className='planner-day-title'>{getDayOfWeek(weekView, props.startDay, 6)}</h3>
-                    <div className="planner-workouts-container">
-                        {workouts.map((workout) => {
-                            return <PlannerWorkout key={workout.workoutId} workout={workout} />
-
-                        })}
-                        <button className='add-workout-btn'onClick={createNewWO}> + New Workout</button>
-                    </div>
-                </div>
+                <PlannerDay weekView={weekView} startDay={props.startDay} day={0} />
+                <PlannerDay weekView={weekView} startDay={props.startDay} day={1} />
+                <PlannerDay weekView={weekView} startDay={props.startDay} day={2} />
+                <PlannerDay weekView={weekView} startDay={props.startDay} day={3} />
+                <PlannerDay weekView={weekView} startDay={props.startDay} day={4} />
+                <PlannerDay weekView={weekView} startDay={props.startDay} day={5} />
+                <PlannerDay weekView={weekView} startDay={props.startDay} day={6} />
+                <PlannerDay weekView={weekView} startDay={props.startDay} day={7} />
             </div>
         </section>
     )

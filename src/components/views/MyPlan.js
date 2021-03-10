@@ -11,7 +11,7 @@ const MyPlan = (props) => {
             <Header view="my-plan"/>
             <div className='my-plan-body'>
             <Planner />
-            {/* <WorkoutLibrary /> */}
+            <WorkoutLibrary />
             </div>
         </div>
     )

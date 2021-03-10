@@ -28,8 +28,16 @@ header {
         .nav-link {
           font-size: 1.6rem;
           display: block;
-          padding: 1.5rem;
+          padding: 2rem;
+          
+          .dropdown-arrow{
+            color: $color-white;
+            padding-left: 4px;
+            padding-top: 8px;
+
+          }
         }
+
 
         .dropdown-links {
           background-color: #fff;
@@ -46,11 +54,17 @@ header {
             font-size: 1.4rem;
             display: block;
             padding: 1.5rem;
+            border-bottom: $border-main;
           }
         }
         &:hover {
           background: $color-background;
           color: $color-black;
+
+          .dropdown-arrow{
+            color: $color-black;
+          }
+
           .dropdown-links {
             display: block;
             box-shadow: $box-shadow-main;
@@ -58,6 +72,9 @@ header {
             a{
               &:hover{
                 background-color: $color-gray;
+                color: $color-blue;
+                border-right: 5px solid $color-blue;
+      
               }
             }
           }
