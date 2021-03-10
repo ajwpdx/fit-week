@@ -98,8 +98,15 @@
         // overflow: scroll;
         // overflow-x: hidden;
 
-        .add-workout-btn{
-          margin: 5px 5px;
+        .create-add-btns{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .add-workout-btn{
+            margin: 5px 5px;
+            width: 50%;
+          }
         }
 
       }

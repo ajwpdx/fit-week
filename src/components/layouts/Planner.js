@@ -49,7 +49,6 @@ const Planner = (props) => {
                 <PlannerDay weekView={weekView} startDay={props.startDay} day={4} />
                 <PlannerDay weekView={weekView} startDay={props.startDay} day={5} />
                 <PlannerDay weekView={weekView} startDay={props.startDay} day={6} />
-                <PlannerDay weekView={weekView} startDay={props.startDay} day={7} />
             </div>
         </section>
     )

@@ -30,7 +30,10 @@ const PlannerDay = (props) => {
                 return <PlannerWorkout key={workout.workoutId} workout={workout} />
 
             })}
-            <button className='add-workout-btn'onClick={toCreateWorkout}> + New Workout</button>
+            <div className="create-add-btns">
+            <button className='add-workout-btn'onClick={toCreateWorkout}>Create</button>
+            <button className='add-workout-btn'onClick={toCreateWorkout}>Add </button>
+            </div>
         </div>
     </div>
     )
