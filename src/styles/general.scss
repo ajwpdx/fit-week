@@ -1,117 +1,123 @@
 body {
-    background-color: $color-background;
-    color: $color-black;
-    transition: background-color 1s ease;
-    transition: color 0.5s ease;
-    font-family: $font-text
-
-  }
-  
-  h1 {
-    font-family: $font-title;
-    font-weight: 650;
-    letter-spacing: .1rem;
-    font-size: 4rem;
-    line-height: 1.2;
-    color: $color-white;
-  }
-  
-  h2 {
-    font-family: $font-headers;
-    font-size: 2.5rem;
-  
-  }
-  
-  h3{
-    font-family: $font-headers;
-    font-size: 1.8rem;
-  }
-  
-  h4 {
-    font-family: $font-text;
-    font-weight: bold;
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-family: $font-text;
-    font-size: 1.2rem;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-  }
-
-  li{
-    margin: 0;
-    padding: 0;
-  }
-
-  input, textarea, select{
-    padding: 1rem;
-    border-radius: 5px;
-    border: $border-main;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
-    font-family: $font-text;
-    resize: none;
-    width: 100%;
-
-    &::placeholder{
-      color: lightgray;
-      font-family: $font-text;
-    }
-
-    &:focus{
-      outline: none;
-      border: $border-active;
-      box-shadow: $box-shadow-active;
-    }
-
-  }
-
-  button{
-    background-color: $color-blue;
-    font-weight: bold;
-    color: white;
-    padding: 1rem;
-    border-radius: 7px;
-    box-shadow: inset;
-    cursor: pointer;
-    font-size: 1.5rem;
-
-    &:hover{
-      // box-shadow: 1px 1px 1px 1px rgba(25,25,0,0.4);
-      opacity: 80%;
-    }
-
-  }
-
-  .main-container{
-    display: flex;
-    flex-direction: row;
-
+  background-color: $color-background;
+  color: $color-black;
+  transition: background-color 1s ease;
+  transition: color 0.5s ease;
+  font-family: $font-text;
 }
 
-  .icon{
-    font-size: 2rem;
-    color: gray;
-    padding-right: .5rem;
-    }
-    
-    .hidden{
-        display: none
-    }
-    
-    .tall-input{
-        height: 6rem;
-        text-align: left;
-        vertical-align: top;
-    }
+h1 {
+  font-family: $font-title;
+  font-weight: 650;
+  letter-spacing: 0.1rem;
+  font-size: 4rem;
+  line-height: 1.2;
+  color: $color-white;
+}
+
+h2 {
+  font-family: $font-headers;
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-family: $font-headers;
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-family: $font-text;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: $font-text;
+  font-size: 1.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+input,
+textarea,
+select {
+  padding: 1rem;
+  border-radius: 5px;
+  border: $border-main;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+  font-family: $font-text;
+  resize: none;
+  width: 100%;
+
+  &::placeholder {
+    color: lightgray;
+    font-family: $font-text;
+  }
+
+  &:focus {
+    outline: none;
+    border: $border-active;
+    box-shadow: $box-shadow-active;
+  }
+}
+
+button {
+  background-color: $color-dark-blue;
+  font-family: $font-text;
+  font-weight: bold;
+  color: white;
+  padding: 1rem;
+  border-radius: 7px;
+  box-shadow: inset;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: ease 0.3s;
+
+  &:hover {
+    // box-shadow: 1px 1px 1px 1px rgba(25,25,0,0.4);
+    // opacity: 80%;
+    background-color: $color-hot-pink;
+  }
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon {
+  font-size: 2rem;
+  color: gray;
+  padding-right: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.tall-input {
+  height: 6rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+label {
+  font-size: 1.3rem;
+  display: block;
+  padding: 0.5rem 0;
+  color: $color-dark-blue;
+}
