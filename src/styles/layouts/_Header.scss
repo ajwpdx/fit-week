@@ -24,6 +24,37 @@ header {
       justify-content: space-between;
       align-items: center;
 
+      .user-icon{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding: 0 2rem;
+    
+        h3{
+            margin: auto;
+            color: $color-white;
+            font-size: 2.2rem;
+            background-color: $color-blue;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            line-height: 30px;
+            border: 4px solid $color-white;
+            text-align: center;
+            margin-right: 4px;
+    
+        }
+
+        .dropdown-arrow{
+          color: $color-white;
+          padding-left: 4px;
+          padding-top: 8px;
+
+        }
+    }
+
       .nav-item {
         .nav-link {
           font-size: 1.6rem;
@@ -38,6 +69,22 @@ header {
           }
         }
 
+        .user-icon{
+          h3{
+            margin: 0 auto;
+            color: $color-white;
+            font-size: 2.2rem;
+            background-color: $color-blue;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            line-height: 30px;
+            border: 4px solid $color-white;
+            text-align: center;
+            margin-right: 4px;
+    
+        }
+        }
 
         .dropdown-links {
           background-color: #fff;
@@ -68,6 +115,7 @@ header {
           .dropdown-links {
             display: block;
             box-shadow: $box-shadow-main;
+            // width: inherit;
 
             a{
               &:hover{

@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 
+const athleteId = 2345
+
 const HeaderNav = (props) => {
   const history = useHistory()
 
@@ -31,21 +33,27 @@ const HeaderNav = (props) => {
   } else {
     return (
 
-        <ul className="header-nav">
-          <li className='nav-item'><a className='nav-link' href="/my-plan">My Plan</a></li>
-          <li className='nav-item'><a className='nav-link' href="/wo-library">W/O Library</a></li>
-          <li className='nav-item'><a className='nav-link' href="/Workout-Plans">Programs
-          <FontAwesomeIcon icon={faChevronDown} className='icon dropdown-arrow'/>
-          </a>
-          
-            <ul className='dropdown-links'>
-                <li><a href="/Workout-Plans">Find Programs</a></li>
-                <li><a href="/Workout-Plans">Program Builder</a></li>
-              </ul>
-            </li>
-          <li className='nav-item'><a className='nav-link' href="/Connect">Connect</a></li>
-          <UserIcon />
-        </ul>
+      <ul className="header-nav">
+        <li className='nav-item'><a className='nav-link' href="/my-plan">My Plan</a></li>
+        <li className='nav-item'><a className='nav-link' href="/wo-library">W/O Library</a></li>
+        <li className='nav-item'><a className='nav-link' href="/Workout-Plans">Programs
+          <FontAwesomeIcon icon={faChevronDown} className='icon dropdown-arrow' />
+        </a>
+          <ul className='dropdown-links'>
+            <li><a href="/Workout-Plans">Find Programs</a></li>
+            <li><a href="/Workout-Plans">Build Program</a></li>
+          </ul>
+        </li>
+        <li className='nav-item'><a className='nav-link' href="/Connect">Connect</a></li>
+        <li className='nav-item'><a className='user-icon' href={`/athlete/${athleteId}`}><h3 className='user-icon'>A</h3> <FontAwesomeIcon icon={faChevronDown} className='icon dropdown-arrow' />
+        </a>
+          <ul className='dropdown-links'>
+            <li><a href={`/athlete/${athleteId}`}>Profile</a></li>
+            <li><a href={`/athlete/${athleteId}/settings`}>Settings</a></li>
+            <li><a href={`/login`}>Logout</a></li>
+          </ul>
+        </li>
+      </ul>
     );
   }
 };
